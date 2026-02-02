@@ -167,6 +167,65 @@
             color: var(--text-muted);
         }
 
+        /* カレンダーボタンの特別スタイル */
+        .calendar-card {
+            background: linear-gradient(135deg, #6750a4 0%, #907dc4 100%);
+            border-radius: 24px;
+            padding: 30px;
+            color: white;
+            text-align: left;
+            margin-top: 40px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            box-shadow: 0 10px 25px rgba(103, 80, 164, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(103, 80, 164, 0.3);
+        }
+
+        .calendar-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .calendar-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .calendar-info p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .calendar-icon-visual {
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            backdrop-filter: blur(4px);
+        }
+
         @media (max-width: 600px) {
             .info-grid {
                 grid-template-columns: 1fr;
@@ -228,6 +287,17 @@
                 <a href="lesson-plan-test/評価基準_国語_文の組み立て.xlsx" class="btn btn-secondary">評価基準 (Excel)</a>
             </div>
         </div>
+
+        <h2 class="section-title">ツール</h2>
+        <a href="https://okamototakunori.github.io/school-calendar-app/" class="calendar-card">
+            <div class="calendar-info">
+                <h3>学校行事カレンダー</h3>
+                <p>最新のスケジュールをリアルタイムで確認</p>
+            </div>
+            <div class="calendar-icon-visual">
+                📅
+            </div>
+        </a>
 
         <div class="footer">
             &copy; 2026 okamoto先生のポートフォリオ
